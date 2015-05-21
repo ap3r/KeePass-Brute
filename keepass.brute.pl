@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# ndrier@trustwave.com
+# ndrier@gmail.com
 # a simple script to attack keepass v1 files
 # cpan install File::KeePass
 
